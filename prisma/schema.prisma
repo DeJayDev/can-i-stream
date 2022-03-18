@@ -1,8 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider  = "prisma-client-js"
+  interface = "asyncio"
 }
 
 datasource db {
@@ -11,8 +9,8 @@ datasource db {
 }
 
 model Artist {
-  id         String @id @unique
+  id         String   @id @unique
   name       String
-  streamable Boolean? // boneless tristates
+  streamable Boolean?
   proof      String?
 }
