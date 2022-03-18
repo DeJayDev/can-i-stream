@@ -1,4 +1,4 @@
-import { Links, LinksFunction, LiveReload, Outlet } from "remix";
+import { Links, LinksFunction, LiveReload, Outlet, Scripts } from "remix";
 import styles from "~/styles/app.css"
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
         <Links/>
       </head>
       <body className="h-screen w-screen bg-white dark:bg-slate-900 dark:text-white"> {/* I feel like this is... "wrong", w/e */}
+        <Scripts/>
         <Outlet/>
         {process.env.NODE_ENV === "development" ? (
           <LiveReload />
